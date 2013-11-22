@@ -29,7 +29,7 @@
 
 ;;; Code:
 (when (< emacs-major-version 24)
-  (error "Theme Park mode only works with Emacs 24 or greater"))
+  (error "Theme Previews only works with Emacs 24 or greater."))
 
 ;; TODO: Error checking. Did we actually get a htmlized buffer? did we actually switch? did we actually write a file?
 (defun tp--make-preview (theme)

@@ -6,6 +6,8 @@ Create preview files for installed themes.
 
 Put `theme-previews.el` somewhere in your `load-path` and `(require 'theme-previews)`.
 
+You also need to install htmlize 1.47 which can be found in [MELPA](http://melpa.milkbox.net/) or [here](http://fly.srk.fer.hr/~hniksic/emacs/htmlize.el.cgi).
+
 ## Status
 
 Currently very *beta* and stuff will change. I want to make the output directory configurable among other things.
