@@ -4,10 +4,9 @@
 
 ;; Author: Rikard Glans <rikard@ecx.se>
 ;; URL: https://github.com/darrik/theme-previews
-;; Version: 0.0.1
+;; Version: 0.0.1a
 ;; Keywords: colorthemes, themes
 ;; Created: 22nd Nov 2013
-;; Package-Requires: ((htmlize "1.47"))
 
 ;; This program is free software; you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by
@@ -31,13 +30,13 @@
 (when (< emacs-major-version 24)
   (error "Theme Previews only works with Emacs 24 or greater."))
 
-;; TODO: Error checking. Did we actually get a htmlized buffer? did we actually switch? did we actually write a file?
+;; TODO: Error checking. Did we actually get a html buffer? did we actually switch? did we actually write a file?
 (defun tp--make-preview (theme)
   "Create preview file for THEME using current buffer."
   (let* ((bufname (buffer-name))
          (outname (format "%s-%s.html" theme bufname))
          (cbuf    (current-buffer)))
-    (let ((hbuf (htmlize-buffer)))
+    (let ((hbuf (htmlfontify-buffer)))
       (switch-to-buffer hbuf)
       (write-file outname)
       (kill-buffer)
