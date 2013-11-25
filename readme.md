@@ -2,28 +2,32 @@
 
 Create preview files for installed themes.
 
-## Installation
-
-Put `theme-previews.el` somewhere in your `load-path` and `(require
-'theme-previews)`.
-
 ## Status
 
 Currently **beta** and needs more testing.
+
+## Installation
+
+Put `theme-previews.el` in your `load-path` and `(require 'theme-previews)`.
 
 ## Usage
 
 Load a file you want to use for the previews (i.e., a code snippet) and run
 `M-x theme-previews`. It will then go through all your installed themes and
-create a file called \<theme\>-\<buffer-name\>.html in the directory specified
-in `M-x customize-group RET theme-previews` (defaults to current directory.)
+create a file called `<theme>-<buffer>.html` in the directory specified in
+`M-x customize-group RET theme-previews` (defaults to current directory.)
 
 ## Notes
 
 Creating previews can take a very long time depending on how many themes you
-have installed.
+have installed (200+ themes takes several minutes.)
 
 You can cancel at any time with `CTRL-g`.
+
+## TL;DR
+
+Drop `theme-previews.el` in your `load-path` and `(require 'theme-previews)`.
+Open a code snippet and run `M-x theme-previews`. Stop with `CTRL-g`.
 
 ## License
 
